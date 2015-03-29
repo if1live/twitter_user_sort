@@ -6,3 +6,4 @@ Jinja2
 django-debug-toolbar
 django-extensions
 django-tools
+Werkzeug
