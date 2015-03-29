@@ -9,7 +9,7 @@ https://twitter.com/Code_60/status/582135263511461889
 
 정렬도 관심없고 시각화도 관심없고 단지 뻘짓을 하고 싶어서 뭔가 어긋난 컨셉으로 importd 샘플을 작성했다.
 
-## Install
+## Install & Run
 ```
 virtualenv .venv
 . ./.venv/bin/activate
