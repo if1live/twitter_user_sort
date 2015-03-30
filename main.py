@@ -52,7 +52,7 @@ def sort_no_answer(username_list):
 
 DEBUG = (__name__ == '__main__')
 d(
-    DEBUG=DEBUG,
+    DEBUG=True,
     INSTALLED_APPS=(
     ),
     DEFAULT_JINJA2_TEMPLATE_EXTENSION='.jinja2',
