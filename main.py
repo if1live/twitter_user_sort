@@ -6,7 +6,15 @@ from __future__ import print_function
 
 import tweepy
 from importd import d
-import config
+import os
+
+try:
+    import config
+    API_KEY = config.API_CLIENT_KEY
+    SECRET_KEY = config.API_SECRET_KEY
+except:
+    API_KEY = os.environ['TWITTER_API_KEY']
+    SECRET_KEY = os.environ['TWITTER_SECRET_KEY']
 
 def get_score(user):
     elem_list = [
@@ -27,7 +35,7 @@ def get_score(user):
     }
 
 def get_score_table(screen_name_list):
-    auth = tweepy.OAuthHandler(config.API_CLIENT_KEY, config.API_SECRET_KEY)
+    auth = tweepy.OAuthHandler(API_KEY, SECRET_KEY)
     api = tweepy.API(auth)
 
     retval = []

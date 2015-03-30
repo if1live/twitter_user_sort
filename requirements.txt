@@ -7,3 +7,4 @@ django-debug-toolbar
 django-extensions
 django-tools
 Werkzeug
+Gunicorn==19.3.0
