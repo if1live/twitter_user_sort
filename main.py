@@ -39,12 +39,9 @@ def get_score_table(screen_name_list):
     api = tweepy.API(auth)
 
     retval = []
-    for screen_name in screen_name_list:
-        try:
-            user = api.get_user(screen_name=screen_name)
-            score = get_score(user)
-        except tweepy.error.TweepError:
-            score = -1
+    user_list = api.lookup_users(screen_names=screen_name_list)
+    for user in user_list:
+        score = get_score(user)
         retval.append(score)
     return retval
 
@@ -53,8 +50,9 @@ def sort_no_answer(username_list):
     score_list = sorted(score_list, key=lambda x: x['score'], reverse=True)
     return score_list
 
+DEBUG = (__name__ == '__main__')
 d(
-    DEBUG=True,
+    DEBUG=DEBUG,
     INSTALLED_APPS=(
     ),
     DEFAULT_JINJA2_TEMPLATE_EXTENSION='.jinja2',
