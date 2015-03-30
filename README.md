@@ -3,6 +3,8 @@
 트윗, 팔로잉, 팔로워, 관심글 수를 이용해서 누가 가장 트잉여인지 정렬하는 웹서비스입니다. 
 사용한 프레임웍 : [importd](https://github.com/amitu/importd)
 
+**[Demo](http://twitter-user-sort.herokuapp.com/)**
+
 ![screen shot](document/twitter_user_sort.png)
 
 https://twitter.com/Code_60/status/582135263511461889
