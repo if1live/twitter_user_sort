@@ -58,3 +58,6 @@ target/
 
 config.py
 secret.txt
+
+.venv
+env.sh
