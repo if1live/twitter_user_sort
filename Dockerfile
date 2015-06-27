@@ -18,10 +18,8 @@ RUN \
   mkdir -p /var/www
 
 RUN \
-  cd /tmp/ &&\
-  wget https://github.com/if1live/twitter_user_sort/archive/master.zip &&\
-  unzip master.zip &&\
-  mv twitter_user_sort-master /var/www/twitter_user_sort
+  cd /var/www/ &&\
+  git clone https://github.com/if1live/twitter_user_sort.git
 
 WORKDIR /var/www/twitter_user_sort
 

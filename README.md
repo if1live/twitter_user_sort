@@ -29,14 +29,16 @@ vim config.py
 
 ### Docker
 ```
+sudo ln -s /<repo_path>/nginx/site.conf /etc/nginx/sites-enabled/nginx/twitter-user-sort.conf
+
 cp env.example.sh env.sh
 vim env.sh
-source env.sh
 
+source env.sh
 docker build -t if1live/twitter-user-sort:0.1 .
 
 # run
-docker run --name v0.1 -e TWITTER_API_KEY=$TWITTER_API_KEY -e TWITTER_SECRET_KEY=$TWITTER_SECRET_KEY -d -p 5000:5000 if1live/twitter-user-sort:0.1
+docker run --name v0.1 -e TWITTER_API_KEY=$TWITTER_API_KEY -e TWITTER_SECRET_KEY=$TWITTER_SECRET_KEY -d -p 8001:5000 if1live/twitter-user-sort:0.1
 docker logs v0.1 # check twitter api key
 
 # stop
